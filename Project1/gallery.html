@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - AggieFit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AggieFit</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gallery</h2>
+        <section class="gallery">
+            <img src="images/gallery1.jpg" alt="AggieFit Event 1" onclick="openModal(this)">
+            <img src="images/gallery2.jpg" alt="AggieFit Event 2" onclick="openModal(this)">
+            <img src="images/gallery3.jpg" alt="AggieFit Event 3" onclick="openModal(this)">
+        </section>
+
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AggieFit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(img) {
+            document.getElementById("modal").style.display = "block";
+            document.getElementById("modal-img").src = img.src;
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
